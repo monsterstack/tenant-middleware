@@ -1,0 +1,14 @@
+{
+  "name": "tenant-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "multi-tenant-db": "https://github.com/monsterstack/multi-tenant-db#development"
+  },
+  "author": "",
+  "license": "ISC"
+}
