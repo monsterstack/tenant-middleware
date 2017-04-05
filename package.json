@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "multi-tenant-db": "https://github.com/monsterstack/multi-tenant-db#development"
+    "multi-tenancy-db": "https://github.com/monsterstack/multi-tenancy-db#development"
   },
   "author": "",
   "license": "ISC"
