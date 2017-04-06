@@ -10,7 +10,7 @@ class TenantDBCreationMiddleware {
   tenantDb(modelFactory) {
     return (req, res, next) => {
       // Build DB Connection and hang on request.
-      let tenantName = req.headers(TENANT_NAME_KEY);
+      let tenantName = req.header(TENANT_NAME_KEY);
       if (tenantName) {
         // This should be async.
         let db = multiTenantDb.findOrCreateNewConnection(tenantName, modelFactory);
