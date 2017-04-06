@@ -1,10 +1,10 @@
 'use strict';
-const TENANT_NAME_KEY = "TenantName";
+const TENANT_NAME_KEY = "X-Tenant-Id";
 const multiTenantDb = require('multi-tenancy-db');
 
 class TenantDBCreationMiddleware {
-  constructor() {
-
+  constructor(app) {
+    this.app = app;
   }
 
   tenantDb(modelFactory) {
