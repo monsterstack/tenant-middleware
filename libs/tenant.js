@@ -1,7 +1,7 @@
 'use strict';
 const TENANT_NAME_KEY = 'X-Tenant-Id';
 const multiTenantDb = require('multi-tenancy-db');
-//const GetCurrentContext = require('app-context').GetCurrent;
+const GetCurrentContext = require('app-context').GetCurrent;
 
 class TenantDBCreationMiddleware {
   constructor(app) {
@@ -16,8 +16,9 @@ class TenantDBCreationMiddleware {
         // This should be async.
         let db = multiTenantDb.findOrCreateNewConnection(tenantName, modelFactory);
         if (db) {
-          //let context = GetCurrentContext();
-          //context.set('db', db);
+          let context = GetCurrentContext();
+          if(context)
+            context.set('db', db);
 
           // Deprecate this line..
           req.db = db;
