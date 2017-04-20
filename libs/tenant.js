@@ -1,7 +1,7 @@
 'use strict';
 const TENANT_NAME_KEY = 'X-Tenant-Id';
 const multiTenantDb = require('multi-tenancy-db');
-const GetCurrentContext = require('app-context').GetCurrent;
+//const GetCurrentContext = require('app-context').GetCurrent;
 
 class TenantDBCreationMiddleware {
   constructor(app) {
