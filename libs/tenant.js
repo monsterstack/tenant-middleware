@@ -16,8 +16,8 @@ class TenantDBCreationMiddleware {
         // This should be async.
         let db = multiTenantDb.findOrCreateNewConnection(tenantName, modelFactory);
         if (db) {
-          let context = GetCurrentContext();
-          context.set('db', db);
+          //let context = GetCurrentContext();
+          //context.set('db', db);
 
           // Deprecate this line..
           req.db = db;
